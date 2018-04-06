@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Timeout</title>
+</head>
+<body>
+	<script>
+		/**
+		 * Vamos a utilizar una Arrow Function para este ejemplo.
+		 */
+		setTimeout(() => {
+			/**
+			 * Escribir en el DOM el mensaje: Han pasado 4 segundos!!
+			 */
+			document.write('Han pasado 4 segundos!!')
+
+			/**
+			 * Escribir en la consola el mensaje: Han pasado 4 segundos!!
+			 */
+			console.log('Han pasado 4 segundos!!')
+
+			/**
+			 * Mostrar un mensaje de alerta: Han pasado 4 segundos!!
+			 */
+			alert('Han pasado 4 segundos!!')
+		}, 4000)
+	</script>
+</body>
+</html>
