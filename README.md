@@ -44,6 +44,31 @@ Ejecuta una función o un fragmento de código de forma repetitiva cada que term
 ~~~
 
 
+### clearTimeout ###
+
+Borra el retraso asignado por `window.setTimeout()`.
+
+***Ejemplo***
+
+~~~
+<button id="cancel-button">Cancelar</button>
+
+<script>
+	const $cancelButton = document.getElementById('cancel-button')
+
+	const timeout = setTimeout(() => {
+		alert('Han pasado 4 segundos!!')
+	}, 4000)
+
+	$cancelButton.addEventListener('click', () => {
+		clearTimeout(timeout)
+	})
+</script>
+~~~
+
+
+<br><br>
+
 ### Enlaces de interes ###
 
 [setTimeout - MDN](https://developer.mozilla.org/es/docs/Web/API/WindowTimers/setTimeout) <br>

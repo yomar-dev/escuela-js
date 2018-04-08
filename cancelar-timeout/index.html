@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Cancelar Timeout</title>
+</head>
+<body>
+	<button id="cancel-button">Cancelar</button>
+
+	<script>
+		const $cancelButton = document.getElementById('cancel-button')
+
+		const timeout = setTimeout(() => {
+			alert('Han pasado 4 segundos!!')
+		}, 4000)
+
+		$cancelButton.addEventListener('click', () => {
+			clearTimeout(timeout)
+		})
+	</script>
+</body>
+</html>
