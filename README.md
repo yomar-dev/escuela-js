@@ -67,6 +67,32 @@ Borra el retraso asignado por `window.setTimeout()`.
 ~~~
 
 
+### clearTimeout ###
+
+Cancela una acción reiterativa que se inició mediante una llamada a `setInterval`.
+
+***Ejemplo***
+
+~~~
+<h1 id="mensaje">Han transcurrido 0 segundos!!</h1>
+<button id="cancel-button">Cancelar</button>
+<script>
+	let mensaje = document.getElementById('mensaje')
+	let contador = 0
+	
+	const interval = setInterval(() => {
+	  contador += 2
+	  mensaje.textContent = `Han transcurrido ${contador} segundos!!`
+	}, 2000)
+
+	const $cancelButton = document.getElementById('cancel-button')
+	$cancelButton.addEventListener('click', () => {
+		clearInterval(interval)
+	})
+</script>
+~~~
+
+
 <br><br>
 
 ### Enlaces de interes ###
