@@ -97,6 +97,17 @@ Cancela una acción reiterativa que se inició mediante una llamada a `setInterv
 
 Es un objeto devuelto al cual enganchas las funciones callback, en vez de pasar funciones callback a una función.
 
+Una promesa recibe una función que a su vez recibe dos parametros dichos parametros también son funciones, si todo esta bien se ejecuta la primera función de lo contrario se ejecuta la segunda.
+
+**Función 1:** `ok` <br>
+**Función 2:** `error`
+
+~~~
+const promesa = new Promise((ok, error) => {
+
+})
+~~~
+
 
 <br><br>
 
