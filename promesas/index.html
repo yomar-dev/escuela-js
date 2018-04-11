@@ -41,7 +41,8 @@
 			$agenda.textContent = message
 			return new Promise((resolve, reject) => {
 				setTimeout(() => {
-				  resolve('Desayunando')
+					reject('No hay comida!!')
+				 	//resolve('Desayunando')
 				}, VESTIR)
 			})
 		}
@@ -50,7 +51,7 @@
 			$agenda.textContent = message
 			return new Promise((resolve, reject) => {
 				setTimeout(() => {
-				  resolve('Estudiando')
+				  	resolve('Estudiando')
 				}, DESAYUNAR)
 			})
 		}
@@ -64,11 +65,22 @@
 			})
 		}
 
+		function error(message){
+			$agenda.style.color = 'red'
+			$agenda.textContent = message
+			return new Promise((resolve, reject) => {
+				setTimeout(() => {
+				  resolve('Estudiando')
+				}, ESTUDIAR)
+			})
+		}
+
 
 		despertar()
 		.then(duchar)
 		.then(vestir)
 		.then(desayunar)
+		.catch(error)
 		.then(estudiar)
 	</script>
 </body>
