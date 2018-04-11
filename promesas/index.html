@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Promesas</title>
+</head>
+<body>
+	<h1 id="agenda">Despertando</h1>
+	<script>
+		const DESPERTAR = 2000;
+		const DUCHAR = 3000;
+		const VESTIR = 3000;
+		const DESAYUNAR = 1000;
+		const ESTUDIAR = 7000;
+		const $agenda = document.getElementById('agenda')
+
+		/**
+		 * Estructura de una promesa.
+		 * const promesa = new Promise((ok, error) => {})
+		 */
+		
+		function despertar(){
+			return new Promise((resolve, reject) => {
+				setTimeout(() => {
+				  resolve('Duchando')
+				}, DESPERTAR)
+			})
+		}
+
+		function duchar(message){
+			$agenda.textContent = message
+			return new Promise((resolve, reject) => {
+				setTimeout(() => {
+				  resolve('Vistiendo')
+				}, DUCHAR)
+			})
+		}
+
+		function vestir(message){
+			$agenda.textContent = message
+			return new Promise((resolve, reject) => {
+				setTimeout(() => {
+				  resolve('Desayunando')
+				}, VESTIR)
+			})
+		}
+
+		function desayunar(message){
+			$agenda.textContent = message
+			return new Promise((resolve, reject) => {
+				setTimeout(() => {
+				  resolve('Estudiando')
+				}, DESAYUNAR)
+			})
+		}
+
+		function estudiar(message){
+			$agenda.textContent = message
+			return new Promise((resolve, reject) => {
+				setTimeout(() => {
+				  resolve('Estudiando')
+				}, ESTUDIAR)
+			})
+		}
+
+
+		despertar()
+		.then(duchar)
+		.then(vestir)
+		.then(desayunar)
+		.then(estudiar)
+	</script>
+</body>
+</html>
