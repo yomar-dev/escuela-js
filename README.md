@@ -93,6 +93,11 @@ Cancela una acción reiterativa que se inició mediante una llamada a `setInterv
 ~~~
 
 
+### Promesas ###
+
+Es un objeto devuelto al cual enganchas las funciones callback, en vez de pasar funciones callback a una función.
+
+
 <br><br>
 
 ### Enlaces de interes ###
